@@ -41,7 +41,10 @@ def error_occured(error):
 def error_com():
     return "An error occurred"
 
+# taking arguments
+@app.route("/user/<username>/")
+def welcome_user(username):
+    return f"Welcome {username}"
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
